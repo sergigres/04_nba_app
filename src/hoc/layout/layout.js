@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './layout.css'
 
 import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
+import Home from '../../components/home/home';
 
 class Layout extends Component {
 
@@ -23,8 +25,8 @@ class Layout extends Component {
                     onHideNav={() => this.toggleSidenav(false)}
                     onOpenNav={() => this.toggleSidenav(true)}
                 />
-                <p>Content</p>
-                <p>Footer</p>
+                {this.props.children}
+                <Footer />
             </div>
         )
     }
